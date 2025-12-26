@@ -1,0 +1,166 @@
+練習問題はこちら
+●SQL道場 : https://sql-dojo.pages.dev/
+●SQLの練習ができる学習サービス : https://sqlab.net/works/
+
+
+★SQLの基本文法まとめ
+
+※ORDER BYはソートで使用する(order by だけなら昇順になる)
+   →降順(ORDER BY テーブル名 DESC;)、昇順(ORDER BY テーブル名 ASC;)
+※アスタリスク(*)はカラムのすべての行を取得する
+※「as」はテーブルやカラム名を別名に変える際に使用する(命名が長い、内容不明の場合に使用することが多いらしい)←表示、出力するときに分かりやすくするためだと思う
+※LIKEはワイルドカードの意味
+　前方一致検索は'文字列%'、後方一致検索は'文字列%文字列'、あいまい検索(含む)は'%文字列%'、完全一致検索は'文字列'という使用方法をする
+
+
+■全データを表示
+
+　SELECT *
+　FROM デーブル名;
+
+
+■特定のカラムを選択
+　
+　SELECT カラム名1,カラム名2
+  FROM テーブル名;
+
+
+■データの件数をカウント
+
+  SELECT COUNT(*) 	/*()は関数の引数パラメーター*/
+  FROM テーブル名;
+
+
+■単純な条件での絞り込み
+
+　SELECT *
+　FROM テーブル名
+　WHERE カラム名 >= 50000;
+
+
+■データの並び替え(複数ver)
+
+　SELECT カラム名1,カラム名2
+　FROM テーブル名
+　ORDER BY カラム名；
+
+  ↓別の書き方
+  SELECT カラム名1, カラム名2
+  FROM テーブル名;
+
+
+■重複を除いた一覧表示	
+
+　SELECT /*重複を除くならDISTINCTを使用する*/
+    　DISTINCT カラム名　FROM テーブル名;
+
+
+■特定の文字を絞り込む(あいまい検索)
+
+　SELECT *
+　FROM テーブル名
+　WHERE カラム名 LIKE '%データ名%'
+
+
+■NULL値の確認
+
+　SELECT * 
+　FROM テーブル名
+　WHERE カラム名 IS NULL;
+
+
+■最大値と最小値
+
+  SELECT  MAX(カラム名),MIN(カラム名)
+  FROM テーブル名;
+
+
+ カラム名指定を場合
+
+　SELECT  
+　MAX(カラム名) as データ,
+　MIN(カラム名) as データ
+　FROM テーブル名;
+
+
+■条件付きの件数カウント
+
+　SELECT COUNT(*) as データ
+　FROM テーブル名
+　WHERE カラム名 >= 30000;
+
+
+■範囲指定
+
+　SELECT * 
+　FROM テーブル名
+　WHERE カラム名 between A and B;
+
+
+■特定の日付
+
+　SELECT *
+　FROM テーブル名
+　WHERE カラム名 = '日付'
+
+
+■絞り込み
+
+　SELECT *
+　FROM テーブル名
+　WHERE カラム名 = '文字列';
+
+
+■平均値計算
+
+　SELECT 
+　AVG(カラム名) as データ
+　FROM テーブル名;
+
+
+■カテゴリの件数
+
+　SELECT
+　COUNT(DISTINCT カラム名) as データ
+　FROM テーブル名;
+
+
+■一部抽出
+
+　SELECT *
+　FROM テーブル名
+　WHERE カラム名 > 0
+
+
+■特定の文字列を含む
+
+　SELECT * 
+　FROM デーブル名
+　WHERE カラム名 LIKE '%特定の文字列%';
+
+
+■合計計算
+
+  SELECT 
+  SUM(カラム名) as データ
+  FROM テーブル名;
+
+
+■複数条件での絞り込み(AND,OR)
+
+  SELECT *
+  FROM テーブル名
+  WHERE  カラム名 >= '日付' AND daily_カラム名 <= 数値;
+
+
+■特定のカラムの降順表示
+
+
+
+
+■
+
+
+
+
+
