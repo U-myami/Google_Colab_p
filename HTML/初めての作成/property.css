@@ -1,0 +1,34 @@
+/* 詳細の設定を行いたい時はCSSでやろう！！！ */
+/* 基本的にはここにプロパティ内容を書くこと */
+
+body{
+background-image: url("G:/マイドライブ/谷野 航/HTML/練習用/background_body.png"); /*画像パス*/
+background-size:cover; /*全画面*/
+background-attachment: fixed; /*背景画像はスクロールしないように固定する(必須)*/
+background-position: center center; /*画像の配置を決める*/
+}
+
+.box{
+padding: 10px;
+}
+
+/* リンク先の画像を強調表示する(色) */
+.box:target{
+border: 4px solid red; /* 赤枠 */
+transition: 0.3s;      /* アニメーション */
+}
+
+h3{
+display: inline-block;	/* 横に並べる */
+margin-right:50px;	/* 右に30px分余白を入れる */
+}
+
+h5{
+color:green;
+font-size:15px;
+}
+
+h6{
+color:#555555;
+font-size:20px
+}

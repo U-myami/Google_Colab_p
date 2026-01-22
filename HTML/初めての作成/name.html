@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">		      <!---文字コードはUTF-8固定--->
+  <title>練習用ブラウザ</title>		　　　<!---ブラウザのタブの表記--->
+
+  <link rel="stylesheet" href="property.css"> <!---CSSを使用するため--->
+</head>
+
+
+<body>
+  <p style="position: relative;">
+    <img src="title.jpg" alt="タイトル画像表示" width="1000" height="80">
+    <span style="position: absolute; top:30px; left:0px; writing-mode: horizontal-tb;">
+      ～HTMLとCSSの練習中～
+    </span>
+  </p>
+
+  <h1>画像を並べた</h1>
+
+  <table>
+  <tr>
+    <td>
+      <div id="section1" class="box">
+        <img src="footprints.gif"><br>
+        <p>足跡のGIF画像です</p>
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div id="section2" class="box">
+        <img src="flower.jpg"><br>
+        <p>ひまわりの写真です</p>
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div id="section3" class="box">
+        <img src="apple.jpg"><br>
+        <p>りんごの画像です</p>
+      </div>
+    </td>
+  </tr>
+</table>
+
+  <p>こんにちは！</p>
+
+  <h2>List練習</h2> <!---リスト練習--->
+
+  <!---順序がないリスト--->
+  <ul>
+    <li>項目1</li>
+    <li>項目2</li>
+    <li>項目3</li>
+  </ul>
+
+  <!---順序があるリスト--->
+  <ol>
+    <li>項目1</li>
+    <li>項目2</li>
+    <li>項目3</li>
+  </ol>
+
+  <!---入れ子での実装--->
+  <ol>
+    <li><b>Language</b>
+      <ul>
+        <li>日本語</li>
+        <li>韓国語</li>
+        <li>英語</li>
+      </ul>
+    <li><b>使用方法</b>
+      <ol>
+        <li>発音</li>
+        <li>意味</li>
+        <li>使用例</li>
+      </ol>
+  </ol>
+
+  <h3>リンク先に移動<br>⇒
+    <a href ="#section1">Gif画像</a>
+    <a href ="#section2">Flower</a>
+    <a href ="#section3">Apple</a>
+  </h3>
+
+  <h4>見出し4</h4>
+  <h5>見出し5</h5>
+  <h6>見出し6</h6>
+
+  <p class="underline">帰ってきません</p>
+
+</body>
+</html>
