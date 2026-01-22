@@ -1,0 +1,29 @@
+/* プルダウンメニュー */
+
+
+ul,li{padding:0;margin:0;}		/* ulとliの余白を削除(勝手に余白がつくらしい) */
+
+.main-menu{display:flex;}		/* メインメニューを横並びにする */
+
+.main-menu li{ position: relative;	/* サブメニューの基準位置にするため */
+	       display:inline-block;
+		width:auto;}		/* 文字の幅を合わせる */
+
+.sub-menu {display:none;		/* サブメニューは最初は見えないようにする */
+ 	   position: absolute;		/* メインメニューのliを基準に合わせて表示 */
+  	   top: 100%; 		        /* メインメニューの真下に表示 */
+	   left: 0;}			/* 左端に揃える */
+
+.main-menu li:hover .sub-menu {display: block;}			/* カーソルを乗せたら表示 */
+
+.main-menu li a {border:1px solid #ccc;
+		font-weight: normal;
+		color: #12c;
+		display: block;
+		text-decoration: none;
+		margin: 0;
+		padding:2px 18px;}
+
+.main-menu li a:hover {background-color: #039;color:#fff;}	/* カーソルが乗っている時、色変更 */
+
+.main-menu li ul li a {border-width: 1px 1px 1px;}		/* サブメニューの罫線調整 */

@@ -1,0 +1,115 @@
+.info{position: relative;}
+
+.info img{width: 100%;
+          display: block;}
+
+.text{position: absolute;
+      top: 50%;
+      left: 50%;			/* 文字の左上が中央に来るように調整 */
+      transform: translate(-50%,-50%);	/* 文字のサイズの半分だけ戻す */
+      color: red;
+      text-align: center;
+      font-weight: bold;
+      font-size: 64px;
+      white-space: nowrap;}		/* 改行させないため */
+      
+.greet{background-color:#008080;}
+
+.greeting{font-weight:bold;}
+
+.aka{color:red;}
+
+.jvs-area{background: #FFEEFF;
+          padding: 30px 40px;
+          border-radius: 12px;
+          box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+          width: fit-content;
+          margin: 80px auto;}
+
+.itiran{font-weight: bold;
+        text-align: center;}
+
+.jvs{font-weight: bold;
+     width: fit-content;		/* ぴったりと合わせる */
+     /*margin: 80px auto;*/		/* 上 右 下 左  */
+     transform: translateX(30px);	/* marginで設定してしまうと設定した場所からの移動になるので注意！！ */
+     list-style: decimal;}		/* 順序を表示 */ 
+
+.midasi{font-size: 30px;
+        background-color:#FF6699;}
+
+/* 各項目の文字列と背景色の場所 */
+.cmt{transform: translateX(40px);		
+     font-size: 18px;
+     width: 90%;
+     background-color:#CCFFFF;
+     background-position: left;}
+
+/* ボタンの色変更 */
+.buttoncolor{transition: background-color 1.5s;	/* 1,5sかけてアニメーションしながら色変化 */
+             width: 100px;
+             height: 100px;
+             --bg-color: red;
+             background-color: var(--bg-color);
+             margin-left: 20px;}
+
+#red-button,#blue-button,#yellow-button,
+.buttoncolor{margin-right: 15px;}
+
+.small{font-size: 10px;}
+
+
+footer {
+font: bold 80%/1em Arial, Helvetica, sans-serif;	/* [太さ],[サイズ]/[行間],[フォントの候補リスト(3つ)] */
+color: #FFF;		/* 文字は白色 */
+text-align: center;	/* 文字列を中心に */
+padding: 10px;		/* 余白を少し */
+background: #000;	/* 背景は黒色 */
+}
+
+/* テキストボックス */
+.textarea{resize: both;}
+
+/* スクロールの一番上 */
+.top{height: 30vh;
+     background: #ffd700;
+     display: flex;
+     justify-content: center;
+     align-items: center;	
+     font-size: 32px;
+}
+
+/* スクロールの一番下 */
+.bottom{height: 30vh;
+     background: #ffd700;
+     display: flex;
+     justify-content: center;
+     align-items: center;	
+     font-size: 32px;
+}
+
+/* スクロールの一番上に戻る(スクロール量を計算して戻るっぽい) */
+#backToTop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  border: none;
+  background: #ff6699;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+/* 表示状態 */
+#backToTop.show {
+  opacity: 1;
+  pointer-events: auto;
+}

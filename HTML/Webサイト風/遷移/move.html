@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang = "ja">
+
+  <head>
+    <meta charset = "UTF-8">
+    <title>サイト風に作成</title>
+
+  </head>
+
+  <body bgcolor= "#FFFF66">
+    <link rel = "stylesheet" href = "property.css">
+    
+    <div class = "header">
+      <img src = "background2.jpg" alt = "タイトル画像は!?!?">
+    </div>
+
+    <!---プルダウンメニューリスト--->
+    <ul class = "main-menu">
+    <li><a href = "move.html" alt = "HOME">HOME</a></li>											<!---項目1 : HOME--->
+    <li><a href = "#">基本情報</a>														<!---項目2 : 基本情報--->
+      <ul class = "sub-menu">
+      <li><a href = "https://www.ipa.go.jp/shiken/kubun/fe.html" alt = "基本情報" target = "_blank">基本情報とは</a></li>			<!---項目2-1--->
+      <li><a href = "https://qiita.com/Iyugo/items/328d67dc9c766b49cf6b" alt = "合格するには" target = "_blank">合格するには</a></li>		<!---項目2-2--->
+      <li><a href = "https://cbt-s.com/examinee/ipa_cbt-faq/detail/4344.html" alt = "試験の流れ" target = "_blank">試験の流れ</a></li>		<!---項目2-3--->
+      <li><a href = "https://www.o-hara.jp/course/joho/joh_column_5" alt = "試験内容" target = "_blank">試験内容</a></li>			<!---項目2-4--->
+      <li><a href = "#">みな様方へ</a></li>													<!---項目2-5--->  
+      </ul>	
+    </li>
+    <li><a href = "#">受験案内</a>														<!---項目3 : 受験案内--->
+      <ul class = "sub-menu">
+      <li><a href = "https://www.ipa.go.jp/shiken/syllabus/gaiyou.html" alt = "受験要領" target = "_blank">受験要領</a></li>			<!---項目3-1--->
+      <li><a href = "https://tenshoku.mynavi.jp/engineer/guide/articles/YH5owRAAACcAEejE" alt = "試験日程" target = "_blank">試験日程</a></li>	<!---項目3-2--->
+      <li><a href = "https://studying.jp/kihonjoho/about-more/kiji-2.html" alt = "合格率" target = "_blank">合格率</a></li>			<!---項目3-3--->
+      <li><a href = "https://cbt-s.com/examinee/examination/fe" alt = "受験申込" target = "_blank">受験申込</a></li>				<!---項目3-4--->
+      </ul>
+    </li>
+    <li><a href = "#">FAQ</a></li>														<!---項目4 : FAQ--->
+    </ul>
+
+    <!---ここから下は文章--->
+    <!---挨拶(自己紹介含む?)--->
+    <div class = "greet">															<!---挨拶--->
+      <p style = "text-align:center"><span class = "greeting">おはこんばんにちわ</span></p>
+      <p>HTML/CSSの練習を始めたばかりのWです</p>
+      <p>自分でサイトを作成したいと思い、調べながら色々試していますが</p>
+      <p>実は...<span class = "aka">自信は全くないです！</span></p>
+      <p>挨拶みたいな文章は<span class="ao">div</span>や<span class="midori">span</span>を使用して表示しています</p>
+      <p>早速ですが、今回作ってみたいこと、やってみたいことを箇条書きで紹介します！</p>
+    </div>
+    <br>
+
+    
+    <ul class = "play">
+    <li class = "ao">Yahooの検索エンジンに遷移</li>
+    <li class = "ao">pdfを開く</li>
+    <li class = "ao">別ウィンドウでサイトを開く</li>
+    </ul>
+    <br>この3つです。ではいきましょう！<br>※実装部分だけなのであしからず<br><br>
+
+    <h1>Yahooの検索エンジンに遷移する</h1>
+    <p>別タブにYahooの検索エンジンに遷移するよ</p><br>
+    
+    <div class = "seni"><a href = "https://www.yahoo.co.jp/",alt = "ヤフー" target = "_blank">⇒Yahooに飛ぶ</a></div><br>
+    
+    <p>コード内容</p>
+    <div class = "code">
+      <code>&lt;div class = "seni"&gt;&lt;a href = "https://www.yahoo.co.jp/",alt = "ヤフー" &gt;⇒Yahooに飛ぶ&lt;/a&gt;&lt;/div&gt;&lt;br&gt;</code>
+    </div>
+
+    <h1>pdfを開く</h1>
+    <p>pdfを別ウィンドゥで表示するよ</p>
+    
+    <div class = "seni"><a href = "pdf_test.pdf" alt = "pdf表示" target = "_blank">⇒テスト用pdfを開く</a></div><br>
+
+    <p>コード内容</p>
+    <div class = "code">
+      <code>&lt;div class = "seni"&gt;&lt;a href = "pdf_test.pdf" alt = "pdf表示" target = "_blank"&gt;⇒テスト用pdfを開く&lt;/a&gt;&lt;/div&gt;&lt;br&gt;</code>
+    </div>
+
+    <h1>別ウィンドゥでサイトを開く</h1>	
+    <p>たまにある使いにくい別ウィンドゥでの遷移　個人的には使いにくいのであまり使わないかも？</p>
+    <p>今回はリタリコ南海堺さんのホームページをお借りしてやってみたいと思います。</p>
+
+    <div class = "seni"><a href = https://works.litalico.jp/?ab_test=pattern_b_dev-003/" alt = "litalico">⇒LITALICO南海堺</a></div><br>
+    
+    <p>コード内容</p>
+    <div class = "code">
+      <code>&lt;div class = "seni"&gt;&lt;a href = https://works.litalico.jp/?ab_test=pattern_b_dev-003/" alt = "litalico"&gt;⇒LITALICO南海堺&lt;/a&gt;&lt;/div&gt;&lt;br&gt;</code>
+    </div>
+
+    <br><p>今回はサイトやpdfなどの別のブラウザ、ファイルに遷移する方法を試しました<br>まだまだいろいろ実装したいことがあるので頑張ります！</p>
+
+  </body>
+</html>
