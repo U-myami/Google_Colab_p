@@ -1,0 +1,337 @@
+/* Google FontのCSS指定が変わっているので注意 */
+
+html {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.pop {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: bold;
+}
+
+/* saladmeetingとメニューを一つの箱にして余白を作成する */
+.container {
+  width: 90%; /* ブラウザの90%の幅 */
+  max-width: 1120px; /* 1120pxまでの幅(幅上限設定) */
+  margin: 0 auto; /* 左右にいい感じにスペースを取って中央ぞろえ */
+  position: relative;
+}
+
+/* ロゴとメニューを横並びにする */
+.flex {
+  display: flex;
+  justify-content: space-between; /* 左端と右端に寄せる(justfiはdisplayとセットで使う) */
+  flex-wrap: wrap; /* 横並びができず縦並びしかできないぐらい縦幅が狭くなったら自動で改行される */
+  align-items: center; /* 横並びにしたものが上下中央になる */
+}
+
+/* ヘッダー */
+header {
+  padding: 27px 0; /* padding: 縦幅　横幅 */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.04em; /*文字と文字との間を狭くする*/
+}
+
+.logo span {
+  color: #80ba4a;
+}
+
+/* saladmeetingとメニューの中にあるメニューだけの箱を横並びにする */
+.header_menu li {
+  margin-left: 40px; /* メニューの左側に余白 */
+}
+
+/* アイドル状態 */
+.header_menu li a {
+  transition: 0.3s;
+}
+
+/* カーソルを合わせると緑になる */
+.header_menu li a:hover {
+  color: #80ba4a;
+  transition: 0.3s;
+}
+
+/* mediaクエリといい、レスポンシブ対応することができる */
+/* 以下の場合だと横幅が768px以下の時はクエリの中のCSSが適応する */
+@media only screen and (max-width: 768px) {
+  header.container {
+    justify-content: center; /* スマホ画面では中央ぞろえにする */
+
+    /* メニューを中央ぞろえにする */
+    .header_menu li {
+      margin: 20px 16px 0; /* marginは 上、右、下、左になっている(時計回り)*/
+    }
+  }
+}
+
+/* メイン */
+#hero {
+  background-image: url(../images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 540px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 90px;
+  overflow: hidden; /* はみ出た部分をカットする */
+}
+
+/* ::は疑似要素といい、オプションみたいなものを付与できる */
+#hero::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  position: absolute; /* absoluteを指定しないと文字とぶつかってしまう */
+  top: 0;
+  left: 0;
+  opacity: 0.2; /* 半透明にする */
+  z-index: 1; /* 黒い部分が文字より手前に来ているのでz-indexを使用して文字より後ろにする */
+}
+
+.hero_inner {
+  z-index: 2;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+}
+
+.hero_inner p {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.hero_inner h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* メイン用レスポンシブ */
+@media only screen and (max-width: 768px) {
+  #hero {
+    height: 460px;
+  }
+
+  .hero_inner p {
+    font-size: 15px;
+  }
+
+  .hero_inner h1 {
+    font-size: 17px;
+  }
+}
+
+/* コンセプト */
+#concept {
+  margin-bottom: 120px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #80ba4a;
+  margin-bottom: 40px;
+}
+
+#concept h3 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+.column-2 {
+  width: 48%;
+}
+
+.text {
+  line-height: 2; /* 行間を設定 */
+}
+
+.concept-img {
+  background-image: url(../images/concept.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 340px;
+  border-radius: 20px;
+}
+
+.heading {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 200px;
+
+  color: #80ba4a;
+  opacity: 0.15;
+  position: absolute; /* absoluteを設定し、topやrightを指定すると始点になる */
+  top: 0;
+  right: 0;
+  transform: translateY(-30%);
+  z-index: -1;
+}
+
+/* コンセプト用レスポンシブ */
+@media only screen and (max-width: 768px) {
+  #concept h3 {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  .column-2 {
+    width: 100%;
+  }
+
+  .text {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .concept-img {
+    margin-top: 30px;
+  }
+}
+
+/* サービス */
+#service {
+  margin-bottom: 120px; /* 下にスペースをいれる */
+}
+
+.service_inner {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.column-40 {
+  width: 40%;
+}
+
+.column-55 {
+  width: 55%;
+}
+
+#service img {
+  border-radius: 20px;
+}
+
+#service h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+/* サービス用レスポンシブ */
+@media only screen and (max-width: 768px) {
+  .column-40 {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .column-55 {
+    width: 100%;
+  }
+
+  #service h3 {
+    font-size: 17px;
+  }
+}
+
+/* カンパニー */
+#company {
+  margin-bottom: 120px;
+}
+
+#company dl {
+  max-width: 900px;
+  margin-left: auto;
+}
+
+#company dt {
+  width: 30%;
+  padding: 48px 0;
+  font-weight: 500;
+  border-bottom: solid 1px #d2ecba;
+}
+
+#company dd {
+  width: 70%;
+  padding: 48px 0;
+  border-bottom: solid 1px #d2ecba;
+}
+
+/* カンパニー用のレスポンシブ */
+@media only screen and (max-width: 768px) {
+  #company dl {
+    font-size: 13px;
+  }
+}
+
+/* 画像横並び */
+.column-a {
+  background-image: url(../images/bottom1.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 24%;
+  height: 270px;
+  border-radius: 20px;
+}
+
+.column-b {
+  background-image: url(../images/bottom2.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 18%;
+  height: 270px;
+  border-radius: 20px;
+}
+.column-c {
+  background-image: url(../images/bottom3.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 24%;
+  height: 270px;
+  border-radius: 20px;
+}
+.column-d {
+  background-image: url(../images/bottom4.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 28%;
+  height: 270px;
+  border-radius: 20px;
+}
+
+/* 画像横並び用のレスポンシブ */
+@media only screen and (max-width: 768px) {
+  .column-a,
+  .column-b,
+  .column-c,
+  .column-d {
+    width: 48%;
+    height: 140px;
+    margin: 1%;
+  }
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  margin: 90px 0;
+}
+
+.copyright {
+  font-size: 12px;
+  margin-top: 40px;
+}
